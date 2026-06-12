@@ -1,19 +1,21 @@
-// Select the theme button from the HTML
-const themeBtn = document.getElementById("themeBtn");
+const themeToggle = document.getElementById("themeToggle");
+const savedTheme = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// Listen for a click on the button
-themeBtn.addEventListener("click", () => {
+if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+  document.body.classList.add("dark-mode");
+}
 
-    // Add/remove the dark-mode class on the body
-    document.body.classList.toggle("dark-mode");
+function updateThemeLabel() {
+  const isDark = document.body.classList.contains("dark-mode");
+  themeToggle?.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+}
 
-    // Check whether dark mode is active
-    const isDarkMode = document.body.classList.contains("dark-mode");
+updateThemeLabel();
 
-    // Change the button text depending on the current theme
-    if (isDarkMode) {
-        themeBtn.textContent = "Light Mode";
-    } else {
-        themeBtn.textContent = "Dark Mode";
-    }
+themeToggle?.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  const isDark = document.body.classList.contains("dark-mode");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  updateThemeLabel();
 });

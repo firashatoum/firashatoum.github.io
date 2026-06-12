@@ -1,211 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Makes the website look good on phone screens too -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firas Hatoum | Molecular & Computational Biologist</title>
+  <meta name="description" content="Personal website of Firas Hatoum, a molecular and computational biologist focused on transcriptomics, single-cell analysis, and reproducible bioinformatics workflows." />
 
-    <title>Firas Hatoum | Bioinformatics Portfolio</title>
-
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Go to top">FH</a>
 
-    <!-- Top navigation bar -->
-    <nav class="navbar">
-        <div class="logo">FH</div>
-
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#interests">Interests</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <button id="themeBtn">Dark Mode</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Hero section -->
-    <header class="hero">
-        <div class="hero-text">
-            <p class="small-title">Molecular & Cell Biology Graduate</p>
-            <h1>Hi, I'm <span>Firas Hatoum</span></h1>
-            <p class="hero-description">
-                I work at the interface of molecular biology, RNA-seq, transcriptomics,
-                and bioinformatics. I am interested in using computational biology to
-                understand host–pathogen interactions and biological systems.
-            </p>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+      <span class="theme-icon" aria-hidden="true">◐</span>
+      <span class="theme-text">Theme</span>
+    </button>
+  </header>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-content">
+        <p class="eyebrow">Molecular &amp; Computational Biologist</p>
+        <h1>Firas Hatoum</h1>
+        <p class="hero-lead">
+          I work at the interface of molecular biology, transcriptomics, and reproducible data analysis.
+        </p>
+        <p class="hero-text">
+          My focus is on building clear, documented workflows for RNA-seq and single-cell data, combining wet-lab understanding with computational analysis to extract biologically meaningful results.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">View selected work</a>
+          <a class="button button-secondary" href="#contact">Contact</a>
         </div>
-    </header>
+      </div>
 
-    <!-- Main content -->
-    <main>
+      <aside class="hero-card" aria-label="Profile summary">
+        <div class="status-dot"></div>
+        <p class="card-label">Current focus</p>
+        <p class="card-title">Transcriptomics workflows, single-cell analysis, and publication-ready biological interpretation.</p>
+        <div class="mini-stack" aria-label="Main technical areas">
+          <span>RNA-seq</span>
+          <span>scRNA-seq</span>
+          <span>R</span>
+          <span>Bash</span>
+          <span>Python</span>
+          <span>Git</span>
+        </div>
+      </aside>
+    </section>
 
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>
-                I am a Molecular and Cell Biology graduate with experience in both wet-lab
-                and dry-lab approaches. My background includes PCR, cell culture, RNA-seq
-                analysis, differential expression analysis, and biological interpretation
-                of transcriptomic data.
-            </p>
-        </section>
+    <section class="section-shell split-section" id="about">
+      <div>
+        <p class="section-kicker">About</p>
+        <h2>Research profile without the noise.</h2>
+      </div>
+      <div class="section-copy">
+        <p>
+          I am trained in molecular and cell biology, with practical experience across wet-lab work and computational biology. My strongest interest is transcriptomic data analysis, especially workflows that move from raw sequencing data to interpretable biological results.
+        </p>
+        <p>
+          I care about clean project structure, reproducibility, transparent documentation, and figures that make the biology easier to understand. This website is a compact overview of selected work, technical skills, and research outputs.
+        </p>
+      </div>
+    </section>
 
-        <section id="skills" class="card">
-            <h2>Skills</h2>
+    <section class="section-shell" id="expertise">
+      <div class="section-heading">
+        <p class="section-kicker">Expertise</p>
+        <h2>Core technical areas</h2>
+      </div>
 
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <h3>Bioinformatics</h3>
-                    <p>RNA-seq, DESeq2, transcriptomics, gene expression analysis</p>
-                </div>
+      <div class="expertise-grid">
+        <article class="expertise-card">
+          <h3>Transcriptomics</h3>
+          <p>Bulk RNA-seq, dual RNA-seq, differential expression analysis, quality control, and biological interpretation.</p>
+          <div class="tag-row">
+            <span>DESeq2</span>
+            <span>HISAT2</span>
+            <span>featureCounts</span>
+            <span>MultiQC</span>
+          </div>
+        </article>
 
-                <div class="skill-box">
-                    <h3>Programming</h3>
-                    <p>R, basic web development, data analysis, reproducible workflows</p>
-                </div>
+        <article class="expertise-card">
+          <h3>Single-cell analysis</h3>
+          <p>Single-cell RNA-seq project organization, QC, normalization, clustering, annotation, and reproducible reporting.</p>
+          <div class="tag-row">
+            <span>Seurat</span>
+            <span>10x data</span>
+            <span>UMAP</span>
+            <span>clustering</span>
+          </div>
+        </article>
 
-                <div class="skill-box">
-                    <h3>Wet Lab</h3>
-                    <p>PCR, cell culture, molecular biology techniques</p>
-                </div>
+        <article class="expertise-card">
+          <h3>Reproducible workflows</h3>
+          <p>Modular R, Bash, and Python scripts designed to be understandable, reusable, and easier to scale later.</p>
+          <div class="tag-row">
+            <span>R</span>
+            <span>Bash</span>
+            <span>Python</span>
+            <span>Git/GitHub</span>
+            <span>Conda</span>
+          </div>
+        </article>
 
-                <div class="skill-box">
-                    <h3>Research Interests</h3>
-                    <p>Host–pathogen interactions, fungal effectors, computational biology</p>
-                </div>
+        <article class="expertise-card">
+          <h3>Molecular biology</h3>
+          <p>Wet-lab background that helps connect sequencing workflows to experimental design and biological constraints.</p>
+          <div class="tag-row">
+            <span>PCR/qPCR</span>
+            <span>RNA/DNA extraction</span>
+            <span>cell culture</span>
+            <span>microscopy</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="projects">
+      <div class="section-heading projects-heading">
+        <div>
+          <p class="section-kicker">Projects</p>
+          <h2>Selected work</h2>
+        </div>
+        <p class="section-note">A short selection, not a full CV.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card featured-project">
+          <div class="project-meta">Bulk RNA-seq · Plant–fungal interaction</div>
+          <h3>Dual RNA-seq analysis of <em>Colletotrichum lupini</em> infection in <em>Lupinus albus</em></h3>
+          <p>
+            Reproducible transcriptomic analysis of a host–pathogen time course, including quality control, alignment, quantification, differential expression, candidate prioritization, and publication-style visualization.
+          </p>
+          <div class="project-footer">
+            <div class="tag-row compact-tags">
+              <span>R</span>
+              <span>Bash</span>
+              <span>DESeq2</span>
+              <span>HISAT2</span>
+              <span>functional annotation</span>
             </div>
-        </section>
+            <a class="text-link" href="https://github.com/firashatoum/dual_rnaseq_lupin_anthracnose" target="_blank" rel="noopener">GitHub profile →</a>
+          </div>
+        </article>
 
-        <section id="projects" class="card">
-            <h2>Projects</h2>
-
-            <div class="project-grid">
-
-                <div class="project-card">
-                    <p class="project-type">Transcriptomics</p>
-                    <h3>Dual RNA-seq Host–Pathogen Project</h3>
-                    <p>
-                        Analysis of <em>Colletotrichum lupini</em> and <em>Lupinus albus</em>
-                        infection dynamics, focusing on fungal effectors, plant immune receptor
-                        candidates, and Starship-like genomic regions.
-                    </p>
-                    <a href="#" class="text-link">Read more</a>
-                </div>
-
-                <div class="project-card">
-                    <p class="project-type">Workflow Design</p>
-                    <h3>Automated RNA-seq Pipeline Concept</h3>
-                    <p>
-                        Early-stage idea for reproducible bioinformatics workflows that simplify
-                        RNA-seq analysis from raw data to interpretable biological results.
-                    </p>
-                    <a href="#" class="text-link">Coming soon</a>
-                </div>
-
-                <div class="project-card">
-                    <p class="project-type">Web Development</p>
-                    <h3>Personal Portfolio Website</h3>
-                    <p>
-                        A small website built with HTML, CSS, and JavaScript to learn web
-                        development and present my academic profile, projects, and interests.
-                    </p>
-                    <a href="#" class="text-link">This website</a>
-                </div>
-
+        <article class="project-card">
+          <div class="project-meta">Single-cell RNA-seq · Workflow development</div>
+          <h3>Modular scRNA-seq workflow for glioblastoma data</h3>
+          <p>
+            Single-cell workflow development using public glioblastoma data, focused on clean scripts for QC, filtering, normalization, clustering, and automated reporting.
+          </p>
+          <div class="project-footer">
+            <div class="tag-row compact-tags">
+              <span>StarSolo</span>
+              <span>Seurat</span>
+              <span>QC</span>
+              <span>clustering</span>
             </div>
-        </section>
-        
-        <section id="publications" class="card">
-            <h2>Publications</h2>
+            <a class="text-link" href="https://github.com/firashatoum/scrna-glioblastoma" target="_blank" rel="noopener">GitHub profile →</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-            <ul class="publication-list">
-                <li>
-                    <strong>Title of Paper</strong><br>
-                    Journal Name, 2025.
-                    <a href="#" class="text-link">View paper</a>
-                </li>
+    <section class="section-shell" id="outputs">
+      <div class="section-heading">
+        <p class="section-kicker">Research outputs</p>
+        <h2>Publications &amp; presentations</h2>
+      </div>
 
-                <li>
-                    <strong>Another Research Output or Poster</strong><br>
-                    Conference / University project, 2024.
-                    <a href="#" class="text-link">View details</a>
-                </li>
-            </ul>
-        </section>
+      <div class="output-list">
+        <article class="output-item">
+          <p class="output-type">Preprint</p>
+          <h3>Adaptive genomic compartments shaped by giant mobile elements underpin the ancient emergence of fungal pathogenicity</h3>
+          <p class="output-authors">Menicucci, A., Fiorenzani, C., <strong>Hatoum, F.</strong>, et al.</p>
+          <a class="text-link" href="https://doi.org/10.64898/2026.05.11.723792" target="_blank" rel="noopener">DOI: 10.64898/2026.05.11.723792 →</a>
+        </article>
 
+        <article class="output-item">
+          <p class="output-type">Poster</p>
+          <h3>Dual RNA-seq analysis reveals host–pathogen interplay in lupin anthracnose</h3>
+          <p class="output-authors"><strong>Hatoum, F.</strong>, Menicucci, A., Baroncelli, R.</p>
+          <p class="muted">SIPaV Annual Conference, 2025</p>
+        </article>
+      </div>
+    </section>
 
-        <section id="interests" class="card">
-            <h2>Research Interests</h2>
+    <section class="section-shell compact-background">
+      <div>
+        <p class="section-kicker">Background</p>
+        <h2>Training</h2>
+      </div>
+      <div class="background-grid">
+        <div>
+          <h3>MSc, Molecular and Cell Biology</h3>
+          <p>University of Bologna</p>
+        </div>
+        <div>
+          <h3>BSc, Medical Laboratory Sciences</h3>
+          <p>American University of Beirut</p>
+        </div>
+      </div>
+    </section>
 
-            <div class="tag-container">
-                <span>Transcriptomics</span>
-                <span>RNA-seq</span>
-                <span>Host–pathogen interactions</span>
-                <span>Fungal effectors</span>
-                <span>Plant immunity</span>
-                <span>Computational biology</span>
-                <span>Reproducible workflows</span>
-                <span>Biotech research</span>
-                <span>Neurodevelopment</span>
-            </div>
-        </section>
+    <section class="section-shell contact-section" id="contact">
+      <p class="section-kicker">Contact</p>
+      <h2>Contact me for collaborations, research discussions, or project-related questions.</h2>
+      <p class="contact-text">
+        The easiest way to reach me is by email. You can also find my code and research profile through the links below.
+      </p>
 
-        <section id="contact" class="card contact-card">
-            <div class="contact-content">
-                <p class="section-label">Get in touch</p>
+      <div class="contact-links">
+        <a href="mailto:hatoum.s.firas@gmail.com">Email</a>
+        <a href="https://github.com/firashatoum" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/firas-s-hatoum" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://orcid.org/0009-0008-5687-4707" target="_blank" rel="noopener">ORCID</a>
+      </div>
+    </section>
+  </main>
 
-                <h2>Let’s connect</h2>
+  <footer class="site-footer">
+    <p>© 2026 Firas Hatoum. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
 
-                <p class="contact-text">
-                    I’m interested in bioinformatics, transcriptomics, computational biology,
-                    and research opportunities where wet-lab biology meets data analysis.
-                    Feel free to reach out or explore my work.
-                </p>
-
-                <div class="contact-links">
-                    <a href="mailto:hatoum.s.firas@gmail.com" class="contact-button" aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-
-                    <a href="https://github.com/firashatoum" target="_blank" class="contact-button" aria-label="GitHub profile">
-                        <i class="fa-brands fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/firas-s-hatoum" target="_blank" class="contact-button" aria-label="LinkedIn profile">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
-
-                <p class="contact-note">
-                    Currently open to research collaborations, PhD opportunities, and bioinformatics projects.
-                </p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Firas Hatoum. Built with HTML, CSS, and JavaScript.</p>
-    </footer>
-
-    <!-- Link to JavaScript -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
