@@ -1,0 +1,411 @@
+/* 
+   The :root selector stores reusable variables.
+   This makes it easier to control colors across the whole website.
+*/
+:root {
+    --bg-color: #f5f7fb;
+    --card-color: #ffffff;
+    --text-color: #1f2937;
+    --muted-text: #6b7280;
+    --accent-color: #2563eb;
+    --accent-dark: #1e40af;
+    --border-color: #e5e7eb;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-color: #1e293b;
+    --text-color: #f8fafc;
+    --muted-text: #cbd5e1;
+    --accent-color: #38bdf8;
+    --accent-dark: #0ea5e9;
+    --border-color: #334155;
+}
+
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+    background: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--muted-text);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+#themeBtn {
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#themeBtn:hover {
+    background: var(--accent-dark);
+}
+
+/* Hero section */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 35%),
+        var(--bg-color);
+}
+
+.hero-text {
+    max-width: 850px;
+}
+
+.small-title {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--accent-color);
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--muted-text);
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: var(--accent-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--accent-dark);
+}
+
+.secondary-btn {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    background: var(--card-color);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Main layout */
+main {
+    width: min(1000px, 90%);
+    margin: 0 auto;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Reusable card style */
+.card {
+    background: var(--card-color);
+    margin: 35px 0;
+    padding: 32px;
+    border-radius: 22px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+    color: var(--text-color);
+}
+
+.card p {
+    color: var(--muted-text);
+}
+
+/* Skills section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skill-box {
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+
+.skill-box h3 {
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+
+/* Projects */
+.project {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h3 {
+    margin-bottom: 8px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 22px;
+    border-radius: 18px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.project-type {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Publications */
+.publication-list {
+    list-style: none;
+}
+
+.publication-list li {
+    margin-bottom: 18px;
+    padding-left: 16px;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Links */
+.text-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag-container span {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+.tag-container span:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.contact-card {
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 35%),
+        var(--card-color);
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-label {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.contact-text {
+    color: var(--muted-text);
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+
+    padding: 13px 20px;
+    border-radius: 999px;
+    font-weight: bold;
+
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-button i {
+    font-size: 1.2rem;
+}
+
+.contact-button:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 35px;
+    color: var(--muted-text);
+}
+
+/* Responsive design for phones */
+@media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 24px;
+    }
+}
