@@ -19,3 +19,22 @@ themeToggle?.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
   updateThemeLabel();
 });
+
+const mobileMenuBtn = document.querySelector("#mobileMenuBtn");
+const navLinks = document.querySelector("#navLinks");
+
+if (mobileMenuBtn && navLinks) {
+  mobileMenuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    mobileMenuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    mobileMenuBtn.textContent = isOpen ? "Close" : "Menu";
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("is-open");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      mobileMenuBtn.textContent = "Menu";
+    });
+  });
+}

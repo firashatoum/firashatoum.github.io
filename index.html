@@ -13,11 +13,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body id="top">
   <header class="site-header">
     <a class="logo" href="#top" aria-label="Go to top">FH</a>
 
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+      Menu
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
       <a href="#projects">Projects</a>
@@ -142,7 +146,7 @@
       </div>
 
       <div class="project-list">
-        <article class="project-card featured-project">
+        <article class="project-card">
           <div class="project-meta">Bulk RNA-seq · Plant–fungal interaction</div>
           <h3>Dual RNA-seq analysis of <em>Colletotrichum lupini</em> infection in <em>Lupinus albus</em></h3>
           <p>
